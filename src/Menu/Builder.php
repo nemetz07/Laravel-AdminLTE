@@ -63,7 +63,7 @@ class Builder
     public function __construct(array $filters = [])
     {
         $this->filters = $filters;
-        $this->shouldCompile = false;
+        $this->shouldCompile = true;
     }
 
     /**
@@ -95,7 +95,7 @@ class Builder
         }
 
         $this->compiledMenu = $this->compileItems($this->rawMenu);
-        $this->shouldCompile = false;
+        $this->shouldCompile = true;
 
         return $this->compiledMenu;
     }
